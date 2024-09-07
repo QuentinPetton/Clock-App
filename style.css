@@ -9,6 +9,17 @@ body {
     background-size: cover;
     font-family: "Inter", sans-serif;
     color: white;
+    margin: 2rem;
+}
+
+.expression-container {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+}
+.expression-container > p {
+    font-size: 0.8rem;
+    font-weight: 400;
 }
 
 
@@ -19,4 +30,21 @@ h1 {
 .current-time-container {
     display: flex;
   align-items: baseline;
+}
+
+#current-location {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.night{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.night > p {
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
 }
