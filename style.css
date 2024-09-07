@@ -1,5 +1,13 @@
-body {
-    background-image: url(./assets/desktop/bg-image-daytime.jpg);
-    background-repeat: no-repeat;
-
+html{
+    height: 100vh;
 }
+
+body {
+    
+    background-image: url(./assets/mobile/bg-image-nighttime.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Inter", sans-serif;
+    color: white;
+}
+
