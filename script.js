@@ -1,4 +1,5 @@
 
+
 //todo récupérer l'heure via API World Time ET l'IP du visiteur
 //méthode fetch pour requeter l'APi
 async function getApiWorldTime () {
@@ -26,19 +27,27 @@ async function getApiWorldTime () {
             //TODO Suivant l'heure, afficher good morning ou good evening + image Sun ou Moon
                 //Soit je met une img en hidden et je switch les classes pour montrer élément souhaité
                 //Soit je crée l'élément dans mon if
-            const imgMoonSun = document.getElementsByClassName(".image-moon-sun");
+
+            const bodyElement = document.querySelector('body');
             const moonSunCommentElement = document.getElementById('moon-sun-comment');
             const moonSunElement = document.getElementById('moon-sun');
+
             if (hours >=5 && hours <12) {
                 moonSunElement.src = './assets/desktop/icon-sun.svg';
-                moonSunCommentElement.innerHTML = 'Good morning';
+                moonSunCommentElement.innerHTML = `Good morning`;
+                bodyElement.style.backgroundImage = "url(./assets/desktop/bg-image-daytime.jpg)";
 
             } else if (hours >=12 && hours <18) {
+
                 moonSunElement.src = './assets/desktop/icon-sun.svg';
-                moonSunCommentElement.innerHTML = 'Good afternoon';
+                moonSunCommentElement.innerHTML = `Good afternoon`;
+                bodyElement.style.backgroundImage = "url(./assets/desktop/bg-image-daytime.jpg)";
+
             } else {
+
                 moonSunElement.src = './assets/desktop/icon-moon.svg';
-                moonSunCommentElement.innerHTML = 'Good evening';
+                moonSunCommentElement.innerHTML = `Good evening`
+                bodyElement.style.backgroundImage = "url(./assets/desktop/bg-image-night.jpg)";
                 
             }
 
