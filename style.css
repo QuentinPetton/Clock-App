@@ -27,6 +27,10 @@ body::before{
     z-index: -1;
 }
 
+body.night::before{
+    background-color: transparent;
+}
+
 .quote-container {
     display: flex;
     align-items: baseline;
