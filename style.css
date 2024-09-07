@@ -3,19 +3,22 @@ html{
 }
 
 body {
-    
     background-image: url(./assets/mobile/bg-image-nighttime.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Inter", sans-serif;
     color: white;
-    margin: 2rem;
+    margin: 0 2rem;
+    height: 100%;
+    
 }
 
 .quote-container {
     display: flex;
     align-items: baseline;
     gap: 1.5rem;
+    height: 50%;
+    padding: 2rem 0 0 0;
 }
 #quote-content {
     font-size: 0.8rem;
