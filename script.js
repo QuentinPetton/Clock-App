@@ -5,7 +5,7 @@
 async function getApiWorldTime () {
     
     try {
-        const time = await fetch("http://worldtimeapi.org/api/ip");
+        const time = await fetch("https://worldtimeapi.org/api/ip");
         //on traite la réponse, si réussie, on converti la réponse au format JSON:
         const data = await time.json();
         console.log(data);
@@ -51,7 +51,6 @@ async function getApiWorldTime () {
                 
             }
 
-        
             //On souhaite avoir le fuseau abrégé (ici CEST pour Paris)
             const CEST = data.abbreviation;
             console.log(CEST);
