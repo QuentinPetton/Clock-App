@@ -23,6 +23,25 @@ async function getApiWorldTime () {
             //=> renvoi heure: minutes
             const timeElement = document.getElementById('current-time');
             timeElement.innerHTML = globalTime;
+            //TODO Suivant l'heure, afficher good morning ou good evening + image Sun ou Moon
+                //Soit je met une img en hidden et je switch les classes pour montrer élément souhaité
+                //Soit je crée l'élément dans mon if
+            const imgMoonSun = document.getElementsByClassName(".image-moon-sun");
+            const moonSunCommentElement = document.getElementById('moon-sun-comment');
+            const moonSunElement = document.getElementById('moon-sun');
+            if (hours >=5 && hours <12) {
+                moonSunElement.src = './assets/desktop/icon-sun.svg';
+                moonSunCommentElement.innerHTML = 'Good morning';
+
+            } else if (hours >=12 && hours <18) {
+                moonSunElement.src = './assets/desktop/icon-sun.svg';
+                moonSunCommentElement.innerHTML = 'Good afternoon';
+            } else {
+                moonSunElement.src = './assets/desktop/icon-moon.svg';
+                moonSunCommentElement.innerHTML = 'Good evening';
+                
+            }
+
         
             //On souhaite avoir le fuseau abrégé (ici CEST pour Paris)
             const CEST = data.abbreviation;
@@ -38,12 +57,12 @@ async function getApiWorldTime () {
             const timeZoneElement = document.getElementById('current-location');
             timeZoneElement.innerHTML = `in ${timeZone}`;
             
+
             //TODO séparer Europe de Paris
 
     } catch (error) {
         //on gère l'erreur
         console.log(error);
-
     }
 
 }
