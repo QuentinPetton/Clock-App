@@ -17,9 +17,12 @@ body {
     align-items: baseline;
     gap: 1.5rem;
 }
-.quote-content-container {
+#quote-content {
     font-size: 0.8rem;
-    font-weight: 400;
+    font-weight: 200;
+}
+#author {
+    font-weight: 500;
 }
 
 

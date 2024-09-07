@@ -60,7 +60,7 @@ async function getQuote () {
 
         const quoteContent = data.content;
         const quoteContentElement = document.getElementById('quote-content');
-        quoteContentElement.innerHTML = quoteContent;
+        quoteContentElement.innerHTML = `"${quoteContent}"`;
 
         const quoteAuthor = data.author;
         const quoteAuthorElement = document.getElementById('author');
