@@ -58,6 +58,11 @@ async function getQuote () {
         console.log(data.content);
         console.log(data.author);
 
+        const quoteContent = data.content;
+        const quoteContentElement = document.getElementById('quote-content');
+        quoteContentElement.innerHTML = quoteContent;
+
+
     } catch (error) {
         console.log(error);
     }

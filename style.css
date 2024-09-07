@@ -12,12 +12,12 @@ body {
     margin: 2rem;
 }
 
-.expression-container {
+.quote-container {
     display: flex;
     align-items: baseline;
     gap: 1.5rem;
 }
-.expression-container > p {
+.quote-container > p {
     font-size: 0.8rem;
     font-weight: 400;
 }
