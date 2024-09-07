@@ -56,7 +56,8 @@ h1 {
 }
 .current-time-container {
     display: flex;
-  align-items: baseline;
+    align-items: baseline;
+    gap: 0.5rem;
 }
 
 #current-location {
