@@ -11,3 +11,12 @@ body {
     color: white;
 }
 
+
+h1 {
+    font-weight: bold;
+    font-size: 6rem;
+}
+.current-time-container {
+    display: flex;
+  align-items: baseline;
+}
