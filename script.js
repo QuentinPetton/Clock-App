@@ -72,7 +72,13 @@ async function getQuote () {
 }
 getQuote();
 
-
+//TODO ajouter fonctionnalité poure refresh une quoteContent + quoteAuthor au clic sur lien a
+const refreshQuoteElement = document.getElementById("refresh-quote");
+refreshQuoteElement.addEventListener('click', (event) => {
+    event.preventDefault();
+    //on rappelle la fonction
+    getQuote();
+});
 
 
 
