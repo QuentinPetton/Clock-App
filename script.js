@@ -49,8 +49,20 @@ fetch("http://worldtimeapi.org/api/ip")
 //Appeller la fonction
 getApiWorldTime();
 
+async function getQuote () {
 
+    try {
+        const quote = await  fetch("https://api.quotable.io/random");
+        const data = await quote.json();
+        console.log(data);
+        console.log(data.content);
+        console.log(data.author);
 
+    } catch (error) {
+        console.log(error);
+    }
+}
+getQuote();
 
 
 
