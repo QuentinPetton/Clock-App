@@ -42,8 +42,8 @@ body::before{
     font-weight: 500;
 }
 #refresh-quote {
-    display: block;
-    width: 100%;
+   display: inline-block;
+    width: auto;
 }
 .refresh-quote-container{
     width: 100%;
