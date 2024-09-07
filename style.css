@@ -27,8 +27,9 @@ body::before{
     z-index: -1;
 }
 
-body.night::before{
-    background-color: transparent;
+.night-mode::before{
+    display: none;
+    
 }
 
 .quote-container {
