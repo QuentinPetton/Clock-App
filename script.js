@@ -144,6 +144,9 @@ function expandContent () {
             const expandButtonTextElement = expandButtonElement.querySelector('span'); 
             const expandButtonIconElement = expandButtonElement.querySelector('img'); 
 
+            const quoteContainerElement = document.querySelector(".quote-container");
+
+
             expandButtonElement.addEventListener('click', (event) => {
                 event.preventDefault();
                 moreContentTimeElement.classList.toggle("hidden");
@@ -151,9 +154,11 @@ function expandContent () {
                 if(moreContentTimeElement.classList.contains("hidden")) {
                     expandButtonTextElement.textContent = "More";
                     expandButtonIconElement.src = "./assets/desktop/icon-arrow-down.svg";
+                    quoteContainerElement.classList.toggle("hidden");
                 } else {
                     expandButtonTextElement.textContent = "Less";
                     expandButtonIconElement.src = "./assets/desktop/icon-arrow-up.svg";
+                    quoteContainerElement.classList.toggle("hidden");
                 }
             });
         }
