@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./reset.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Clock App</title>
 </head>
@@ -57,8 +57,32 @@
   </button>
 </div>
 
+<div class="more-content-time-container">
+
+  <div class ="current-timezone">
+    <span >Current Timezone</span>
+    <span id="expand-current-location">Loading...</span>
+  </div>
+
+  <div class ="total-days">
+    <span>Day of the year</span>
+    <span id="expand-current-day-year">Loading...</span>
+  </div>
+
+  <div class ="actual-day">
+    <span>Day of the week</span>
+    <span id="expand-current-day-week">Loading...</span>
+  </div>
+
+  <div class ="total-week">
+    <span>Week Number</span>
+    <span id="expand-current-week-year">Loading... </span>
+  </div>
+
+</div>
 
 
-  <script src="script.js"></script>
+
+  <script type="module" src="script.js"></script>
 </body>
 </html>

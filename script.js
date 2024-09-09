@@ -69,6 +69,28 @@ async function getApiWorldTime () {
 
             //TODO séparer Europe de Paris
 
+
+            //SECTION EXPAND BUTTON
+            const expandTimeZoneElement = document.getElementById('expand-current-location');
+            expandTimeZoneElement.innerHTML = `${timeZone}`;
+            //On veux récupérer day of the week
+
+            const expandDayOfWeekElement = document.getElementById('expand-current-day-week');
+            expandDayOfWeekElement.innerHTML = `${data.day_of_week}`;
+
+            console.log(data.day_of_week);
+
+            //On veux récupérer days of the year
+            const expandDayOfYearElement = document.getElementById('expand-current-day-year');
+            expandDayOfYearElement.innerHTML =`${data.day_of_year}`;
+
+            console.log(data.day_of_year);
+
+            //On veux récupérer le week number
+
+        const expandWeekOfYearElement = document.getElementById('expand-current-week-year');
+        expandWeekOfYearElement.innerHTML = `${data.week_number}`;
+
     } catch (error) {
         //on gère l'erreur
         console.log(error);

@@ -90,7 +90,7 @@ button {
     border-radius: 2rem;
     border: none;
     background-color: white;
-    padding: 0.7rem 1.2rem;
+    padding: 0.7rem 1rem;
     color:#303030 ;
     text-transform: uppercase;
     display: flex;
@@ -104,6 +104,17 @@ button {
     background-color: #303030;
     border-radius: 50%;
     padding: 0.5rem;
+}
+
+
+.more-content-time-container{
+    color:#303030;
+    background-color: rgba(255, 255, 255, 0.753);
+  
+}
+
+.more-content-time-container{
+    display: block;
 }
 
  
@@ -142,6 +153,23 @@ h1 {
 
 body {
     padding: 2rem 7rem 2rem 7rem;
+}
+
+
+.time-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.night  {
+    grid-column: 1/2;
+}
+
+.current-time-container{
+    grid-column: 1/2;
+}
+#current-location{
+    grid-column: 1/2;
 }
 
 }
