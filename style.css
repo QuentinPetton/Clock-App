@@ -174,11 +174,9 @@ letter-spacing: 0px;
 
 h1 {
     font-size: 11rem;
-}
+} 
 
-body {
-    padding: 2rem 4rem;
-}
+
 
 
 }
@@ -196,9 +194,6 @@ h1 {
     font-size: 12.5rem;
 }
 
-body {
-    padding: 2rem 7rem 2rem 7rem;
-}
 
 
 .time-container {
