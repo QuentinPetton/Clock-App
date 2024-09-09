@@ -93,14 +93,19 @@ button {
     border-radius: 2rem;
     border: none;
     background-color: white;
-    padding: 0.7rem 1rem;
     color:#303030 ;
     text-transform: uppercase;
     display: flex;
-    gap: 0.7rem;
     margin-top: 2rem;
     font-size: 1rem;
     cursor: pointer;
+    align-items: center;
+    margin: 1rem 0 0 2rem;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    gap: 0.5rem;
+    cursor: pointer;
+    width: auto;
+    justify-self: start;
 }
 
 
@@ -108,8 +113,12 @@ button {
 .img-button-container >img {
     
     background-color: #303030;
+
     border-radius: 50%;
-    padding: 0.5rem;
+    width: 70%;
+    
+
+
 }
 
 .more-content-time-container {
@@ -174,7 +183,7 @@ body {
 
 .time-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .night  {
@@ -186,6 +195,12 @@ body {
 }
 #current-location{
     grid-column: 1/2;
+}
+
+button{
+    grid-column: 4;
+    justify-self: start;
+
 }
 
 }
