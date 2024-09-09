@@ -100,6 +100,7 @@ button {
     gap: 0.7rem;
     margin-top: 2rem;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 
@@ -116,6 +117,13 @@ button {
     font-size: 0.6rem;
     letter-spacing: 2px;
     font-weight: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hidden {
+    display: none;
 }
 
 .more-content-time-container{
@@ -124,12 +132,6 @@ button {
   
 }
 
-.more-content-time-container{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  
-}
 
  
 @media (min-width: 768px) {

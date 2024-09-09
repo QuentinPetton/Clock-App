@@ -11,12 +11,12 @@ async function getApiWorldTime () {
         console.log(data);
         
             //On veux récupérer l'heure
-            const dateTime = data.datetime;
+            const dateTime = new Date(data.datetime);
             console.log(dateTime);
         
-            let now = new Date()
-            let hours = now.getHours().toString().padStart(2, '0');
-            let minutes = now.getMinutes().toString().padStart(2, '0');
+           
+            let hours = dateTime.getUTCHours().toString().padStart(2, '0');
+            let minutes = dateTime.getUTCMinutes().toString().padStart(2, '0');
             //padStart permet d'ajouter un zéro devant chiffre, par exemple si 14h9
            
         
@@ -65,8 +65,7 @@ async function getApiWorldTime () {
             //=> renvoi Europe/Paris
             const timeZoneElement = document.getElementById('current-location');
             timeZoneElement.innerHTML = `in ${timeZone}`;
-            
-
+        
             //TODO séparer Europe de Paris
 
 
@@ -88,8 +87,8 @@ async function getApiWorldTime () {
 
             //On veux récupérer le week number
 
-        const expandWeekOfYearElement = document.getElementById('expand-current-week-year');
-        expandWeekOfYearElement.innerHTML = `${data.week_number}`;
+            const expandWeekOfYearElement = document.getElementById('expand-current-week-year');
+            expandWeekOfYearElement.innerHTML = `${data.week_number}`;
 
     } catch (error) {
         //on gère l'erreur
@@ -124,6 +123,9 @@ async function getQuote () {
 }
 getQuote();
 
+
+
+
 //TODO ajouter fonctionnalité poure refresh une quoteContent + quoteAuthor au clic sur lien a
 const refreshQuoteElement = document.getElementById("refresh-quote");
 refreshQuoteElement.addEventListener('click', (event) => {
@@ -132,5 +134,30 @@ refreshQuoteElement.addEventListener('click', (event) => {
     getQuote();
 });
 
+
+//todo ajouter un event au clic sur boutton:
+        //SI pas déplié, retirer more et passer en less + img - afficher contenu - retirer quote section
+
+function expandContent () {
+            const moreContentTimeElement = document.querySelector(".more-content-time-container");
+            const expandButtonElement = document.querySelector(".up.down");
+            const expandButtonTextElement = expandButtonElement.querySelector('span'); 
+            const expandButtonIconElement = expandButtonElement.querySelector('img'); 
+
+            expandButtonElement.addEventListener('click', (event) => {
+                event.preventDefault();
+                moreContentTimeElement.classList.toggle("hidden");
+
+                if(moreContentTimeElement.classList.contains("hidden")) {
+                    expandButtonTextElement.textContent = "More";
+                    expandButtonIconElement.src = "./assets/desktop/icon-arrow-down.svg";
+                } else {
+                    expandButtonTextElement.textContent = "Less";
+                    expandButtonIconElement.src = "./assets/desktop/icon-arrow-up.svg";
+                }
+            });
+        }
+
+        expandContent();
 
 
