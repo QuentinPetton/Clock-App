@@ -242,8 +242,12 @@ h1 {
 
 @media (min-width: 1024px) {
 
+
+
 #moon-sun-comment, #current-location {
     font-size: 1.5rem;
+    letter-spacing: 4.8px;
+    line-height: 48px;
 }
 #cest{
     font-size: 2.5rem;

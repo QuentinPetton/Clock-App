@@ -24,9 +24,7 @@ async function getApiWorldTime () {
             //=> renvoi heure: minutes
             const timeElement = document.getElementById('current-time');
             timeElement.innerHTML = globalTime;
-            //TODO Suivant l'heure, afficher good morning ou good evening + image Sun ou Moon
-                //Soit je met une img en hidden et je switch les classes pour montrer élément souhaité
-                //Soit je crée l'élément dans mon if
+        
 
             const bodyElement = document.querySelector('body');
             const moonSunCommentElement = document.getElementById('moon-sun-comment');
@@ -34,19 +32,19 @@ async function getApiWorldTime () {
 
             if (hours >=5 && hours <12) {
                 moonSunElement.src = './assets/desktop/icon-sun.svg';
-                moonSunCommentElement.innerHTML = `Good morning`;
+                moonSunCommentElement.innerHTML = `Good morning, it's currently`;
                 bodyElement.style.backgroundImage = "url(./assets/desktop/bg-image-daytime.jpg)";
 
             } else if (hours >=12 && hours <18) {
 
                 moonSunElement.src = './assets/desktop/icon-sun.svg';
-                moonSunCommentElement.innerHTML = `Good afternoon`;
+                moonSunCommentElement.innerHTML = `Good afternoon, it's currently`;
                 bodyElement.style.backgroundImage = "url(./assets/desktop/bg-image-daytime.jpg)";
 
             } else {
 
                 moonSunElement.src = './assets/desktop/icon-moon.svg';
-                moonSunCommentElement.innerHTML = `Good evening`
+                moonSunCommentElement.innerHTML = `Good evening, it's currently`
                 bodyElement.style.backgroundImage = "url(./assets/desktop/bg-image-nighttime.jpg)";
                 bodyElement.classList.toggle('night-mode'); //retire le film opacité
                 
