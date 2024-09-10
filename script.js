@@ -45,7 +45,7 @@ async function getApiWorldTime () {
 
                 moonSunElement.src = './assets/desktop/icon-moon.svg';
                 moonSunCommentElement.innerHTML = `Good evening, it's currently`
-                bodyElement.style.backgroundImage = "url(./assets/desktop/bg-image-daytime.jpg)";
+                bodyElement.style.backgroundImage = "url(./assets/desktop/bg-image-nighttime.jpg)";
                 bodyElement.classList.toggle('night-mode'); //retire le film opacité
                 
             }
