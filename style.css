@@ -37,7 +37,6 @@ body::before{
     display: flex;
     align-items: baseline;
     gap: 1.5rem;
-   
     padding: 2rem 2rem 0 2rem;
 }
 #quote-content {
@@ -57,7 +56,7 @@ body::before{
 }
 
 .time-container{
-   margin-top: 6rem;
+   margin-top: 16rem;
 }
 
 h1 {
@@ -83,6 +82,7 @@ h1 {
     align-items: center;
     gap: 1rem;
     padding: 2rem;
+    text-transform: uppercase;
 }
 .night > p {
     font-weight: 400;
@@ -165,8 +165,17 @@ letter-spacing: 0px;
  
 @media (min-width: 768px) {
 
+
+    .time-container{
+        margin-top: 20rem;
+     }
+#moon-sun-comment{
+    font-size: 8rem;
+
+}
+
 #quote-content, #author, #current-location, #moon-sun-comment, #current-location  {
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 #cest{
     font-size: 2rem;
@@ -242,6 +251,10 @@ h1 {
 
 @media (min-width: 1024px) {
 
+#quote-content, #author{
+    font-size: 1.2rem;
+    padding: 0 0 0 10rem;
+}
 
 
 #moon-sun-comment, #current-location {
@@ -266,17 +279,21 @@ h1 {
 .time-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    
 }
 
 .night  {
     grid-column: 1/2;
+    padding: 0 0 0 10rem;
 }
 
 .current-time-container{
     grid-column: 1/2;
+    padding: 0 0 0 10rem;
 }
 #current-location{
     grid-column: 1/2;
+    padding: 0 0 0 10rem;
 }
 
 button{
@@ -285,12 +302,19 @@ button{
 
 }
 #quote-content, #author, #current-location, #moon-sun-comment, #current-location  {
-    font-size: 0.9rem;
+    font-size: 1.3rem;
 }
 
 #expand-current-location, #expand-current-day-year, #expand-current-day-week, #expand-current-week-year{
     font-size: 3.5rem;
 }
 
+.left{
+    padding: 0 10rem;
+}
+
+.right {
+    padding: 0 10rem;
+}
 
 }
