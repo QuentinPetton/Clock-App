@@ -166,7 +166,7 @@ letter-spacing: 0px;
 @media (min-width: 768px) {
 
 #quote-content, #author, #current-location, #moon-sun-comment, #current-location  {
-    font-size: 1.3rem;
+    font-size: 0.9rem;
 }
 #cest{
     font-size: 2rem;
@@ -174,9 +174,68 @@ letter-spacing: 0px;
 
 h1 {
     font-size: 11rem;
+
 } 
+.quote-content-container {
+    padding: 5rem 0 0 5rem;
+}
+.time-container {
+    padding: 0 0 0 5rem;
+}
+
+.more-content-time-container {
+    display: flex;
+    flex-direction: row;
+    padding: 5rem;
+    gap: 5rem;
+}
+.hidden {
+    display: none;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+}
 
 
+.total-days {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 3rem;
+    
+}
+.actual-day {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.current-timezone  {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.total-week  {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+#expand-current-location, #expand-current-day-year, #expand-current-day-week, #expand-current-week-year{
+    font-size: 2.5rem;
+}
 
 
 }
@@ -194,6 +253,10 @@ h1 {
     font-size: 12.5rem;
 }
 
+.left {
+    border-right: 5px solid #303030 ;
+
+}
 
 
 .time-container {
@@ -217,5 +280,13 @@ button{
     justify-self: start;
 
 }
+#quote-content, #author, #current-location, #moon-sun-comment, #current-location  {
+    font-size: 0.9rem;
+}
+
+#expand-current-location, #expand-current-day-year, #expand-current-day-week, #expand-current-week-year{
+    font-size: 3.5rem;
+}
+
 
 }
